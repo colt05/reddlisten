@@ -5,6 +5,7 @@
 - https://github.com/decred/insight-api for the API that dcrlisten connects to.  
 - http://stackoverflow.com/questions/18935539/authenticate-with-github-using-token?rq=1
 - https://gist.github.com/domenic/ec8b0fc8ab45f39403dd
+- http://stackoverflow.com/questions/999907/git-push-says-everything-up-to-date-even-though-i-have-local-changes
 - http://stackoverflow.com/questions/19845679/build-with-travis-ci-and-push-some-files-folder-to-another-repository   
   
 ## About ##
