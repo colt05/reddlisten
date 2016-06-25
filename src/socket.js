@@ -26,8 +26,9 @@ TransactionSocket.init = function() {
       			socket.emit('subscribe', room);
       			StatusBox.connected("blockchain");
 		 });
-    		socket.on(eventToListenTo, function(data) {
+    		socket.on('tx', function(data) {
       			console.log("New transaction received: " + data.txid);
+      			new Transaction(1, true);
     		});
 		/*
 		var connection = new ReconnectingWebSocket('wss://ws.blockchain.info/inv');
