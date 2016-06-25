@@ -2,7 +2,7 @@ language: node_js
 before_install: npm install -g grunt-cli & echo "="
 install: npm install
 script: grunt
-after_success: cd dcrlisten && git remote rm origin && git remote add origin https://colt05:${GH_TOKEN}@github.com/colt05/dcrlisten.git && git add . && git commit -m "AUTOMATIC TRAVIS BUILD" && git push -u origin gh-pages
+after_success: git remote rm origin && git remote add origin https://colt05:${GH_TOKEN}@github.com/colt05/dcrlisten.git && git add . && git commit -m "AUTOMATIC TRAVIS BUILD" && git push -u origin gh-pages
 
 branches:
   only:
