@@ -5,7 +5,7 @@ env:
   - COMMIT_AUTHOR_EMAIL: "fake@email.yml"
 before_install: npm install -g grunt-cli & echo "="
 install: npm install
-script: grunt && ./deploy.sh
+script: grunt && chmod +x deploy.sh && ./deploy.sh
 after_success:
     - git remote rm origin
     - git remote add origin https://colt05:${GH_TOKEN}@github.com/colt05/dcrlisten.git
