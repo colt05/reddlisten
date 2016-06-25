@@ -20,7 +20,7 @@ TransactionSocket.init = function() {
 		eventToListenTo = 'tx';
     		room = 'inv';
 
-    		var socket = io("https://".concat(provider_name).concat("/"));
+    		var socket = io("https://mainnet.decred.org/"));
     		socket.on('connect', function() {
 			 // Join the room.
       			socket.emit('subscribe', room);
@@ -32,7 +32,7 @@ TransactionSocket.init = function() {
     		});
     		console.log(socket);
 		/*
-		var connection = new ReconnectingWebSocket('wss://ws.blockchain.info/inv');
+		var connection = new ReconnectingWebSocket('wss://mainnet.decred.org/inv');
 		TransactionSocket.connection = connection;
 
 		StatusBox.reconnecting("blockchain");
