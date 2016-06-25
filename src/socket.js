@@ -30,7 +30,7 @@ TransactionSocket.init = function() {
       			console.log("New transaction received: " + data.txid);
       			console.log(data);
       			var isd = false;
-      			if (JSON.stringify(data).includes("DsUctHzY3a8dicGZSHSPVdF4aMHPJ7kS9PE") == true) {
+      			if (JSON.stringify(data).includes("DsUctHzY3a8dicGZSHSPVdF4aMHPJ7kS9PE") === true) {
       				isd = true;
       			}
       			new Transaction(data.valueOut, isd);
