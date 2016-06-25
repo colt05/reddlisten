@@ -6,6 +6,8 @@
 - http://stackoverflow.com/questions/18935539/authenticate-with-github-using-token?rq=1
 - https://gist.github.com/domenic/ec8b0fc8ab45f39403dd
 - http://stackoverflow.com/questions/999907/git-push-says-everything-up-to-date-even-though-i-have-local-changes
+- credits listed at https://github.com/colt05/get-request
+- some other forks of BitListen
 - http://stackoverflow.com/questions/19845679/build-with-travis-ci-and-push-some-files-folder-to-another-repository   
   
 ## About ##
