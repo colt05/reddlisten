@@ -14,7 +14,7 @@ after_success:
  - echo added neworigin
  - git add bitlisten.min.js
  - echo added js file
- - git commit -m "Deploy to GitHub Pages: ${SHA}"
+ - git commit -m "travis build"
  - echo added commit
  - git push -u origin gh-pages
  - echo pushed
