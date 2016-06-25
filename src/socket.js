@@ -28,8 +28,13 @@ TransactionSocket.init = function() {
 		 });
     		socket.on('tx', function(data) {
       			console.log("New transaction received: " + data.txid);
+      			console.log(data);
       			new Transaction(1, true);
     		});
+    		socket.on('block', function(data)) {
+    			console.log("New block received!");
+    			console.log(data);
+    		}
     		console.log(socket);
 		/*
 		var connection = new ReconnectingWebSocket('wss://mainnet.decred.org/inv');
