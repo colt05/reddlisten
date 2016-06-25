@@ -1,8 +1,10 @@
+// WARNING:
+// mainnet.decred.org Socket.IO API is supposed to be loaded BEFORE this script!
 var satoshi = 100000000;
 var DELAY_CAP = 20000;
 var lastBlockHeight = 0;
 
-var provider_name = "blockchain.info";
+var provider_name = "mainnet.decred.org";
 
 /** @constructor */
 function TransactionSocket() {
@@ -15,13 +17,26 @@ TransactionSocket.init = function() {
 		TransactionSocket.connection.close();
 
 	if ('WebSocket' in window) {
+		eventToListenTo = 'tx'
+    		room = 'inv'
+
+    		var socket = io("//mainnet.decred.org/");
+    		socket.on('connect', function() {
+			 // Join the room.
+      			socket.emit('subscribe', room);
+      			StatusBox.connected("blockchain");
+		 });
+    		socket.on(eventToListenTo, function(data) {
+      			console.log("New transaction received: " + data.txid)
+    		});
+		/*
 		var connection = new ReconnectingWebSocket('wss://ws.blockchain.info/inv');
 		TransactionSocket.connection = connection;
 
 		StatusBox.reconnecting("blockchain");
 
 		connection.onopen = function() {
-			console.log('Blockchain.info: Connection open!');
+			console.log('mainnet.decred.org: Connection open!');
 			StatusBox.connected("blockchain");
 			var newTransactions = {
 				"op" : "unconfirmed_sub"
@@ -38,7 +53,7 @@ TransactionSocket.init = function() {
 		};
 
 		connection.onclose = function() {
-			console.log('Blockchain.info: Connection closed');
+			console.log('mainnet.decred.org: Connection closed');
 			if ($("#blockchainCheckBox").prop("checked"))
 				StatusBox.reconnecting("blockchain");
 			else
@@ -46,7 +61,7 @@ TransactionSocket.init = function() {
 		};
 
 		connection.onerror = function(error) {
-			console.log('Blockchain.info: Connection Error: ' + error);
+			console.log('mainnet.decred.org: Connection Error: ' + error);
 		};
 
 		connection.onmessage = function(e) {
@@ -96,6 +111,7 @@ TransactionSocket.init = function() {
 			}
 
 		};
+		*/
 	} else {
 		//WebSockets are not supported.
 		console.log("No websocket support.");
