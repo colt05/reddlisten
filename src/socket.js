@@ -20,7 +20,7 @@ TransactionSocket.init = function() {
 		eventToListenTo = 'tx';
     		room = 'inv';
 
-    		var socket = io("//mainnet.decred.org/");
+    		var socket = io("https://".concat(provider_name).concat("/");
     		socket.on('connect', function() {
 			 // Join the room.
       			socket.emit('subscribe', room);
