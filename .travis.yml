@@ -3,23 +3,25 @@ env:
   global:
   - ENCRYPTION_LABEL: 14f59a8a5f3c
   - COMMIT_AUTHOR_EMAIL: fake@email.yml
-before_install: 
- - ls
- - git clone --branch=gh-pages https://github.com/colt05/reddlisten.git 
- - cd reddlisten 
- - ls
- - npm install -g grunt-cli
- - echo "="
+  - secure: U0oGo0kK5XxWGlrZwnWW0xsK/HTlIE+8RhXjcFNmZCG3YtFeI4NSzjazOODy4s0TtI3KWWV4aG+owCt1xAKwj+REjo5x/0sX1SyzOiUlsoDopGnBOyyCIsT1aJq/c8pQSwoiQDXQwLq42WK8fSfBosefODd2zkEdS7/fYFGg+LqgpHTfJsblH4EYj+D1oibnOkOI3PFRKQIUx5GifzqH0Kdha5x60MTBlklEHstcBmsUD3N3HWZ74/nCD1CBVJn9yBSoQBxjXSd1CEv07/8mokfvFam72qg4IUi34By5B6E9a5fqYhez1ABGnEfTnKsWSLYnetgTJaugKaNK/2If/ulI5OvyxHYH8VxvMADZfzhE064OP1jdO178KiUV8TWamOqi6JQLYjgiP4Dc1kDfdPG3GhhQBHTZ5G4Ld2RYlxOBZ+zaGX9ZrSqWb4n4lGG3KWdQn3Ms0tvJ1l7PT6YpxFIRQbDgXDds7BQM6NEYeOlmP3EgMXaFYCNws6OzWYAfIliqd5FRqZlMTM83BLc0c81ALLJc/QJ4mdN8scwleyhq2rLQJqegWFfH5Cv3oBiF1m6Zv+uh7GdM8Sl2g+sg4N99riMVX9H/kwB2rSlxOCnLVuOifm2zFQnvJficqboKs9O1F3Qxr233MQ8vuc3QwjEr8Bo4UEDLE7OEUSXgaYY=
+before_install:
+- ls
+- git clone --branch=gh-pages https://github.com/colt05/reddlisten.git
+- cd reddlisten
+- ls
+- npm install -g grunt-cli
+- echo "="
 install: npm install
 script: grunt && chmod +x deploy.sh
 after_success:
- - git config user.name "Travis CI" >> /dev/null && echo set name
- - git config user.email "$COMMIT_AUTHOR_EMAIL" >> /dev/null && echo set email
- - git remote rm origin && echo removed old origin
- - git remote add origin https://colt05-ci:${GH_TOKEN}@github.com/colt05/reddlisten.git && echo added neworigin
- - git add bitlisten.min.js && echo added js file
- - git commit -m "travis build" && echo added commit
- - git push -u -f origin gh-pages && echo pushed
+- git config user.name "Travis CI" >> /dev/null && echo set name
+- git config user.email "$COMMIT_AUTHOR_EMAIL" >> /dev/null && echo set email
+- git remote rm origin && echo removed old origin
+- git remote add origin https://colt05-ci:${GH_TOKEN}@github.com/colt05/reddlisten.git
+  && echo added neworigin
+- git add bitlisten.min.js && echo added js file
+- git commit -m "travis build" && echo added commit
+- git push -u -f origin gh-pages && echo pushed
 branches:
   only:
   - gh-pages
