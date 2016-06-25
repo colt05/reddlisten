@@ -8,16 +8,13 @@ before_install: npm install -g grunt-cli & echo "="
 install: npm install
 script: grunt && chmod +x deploy.sh
 after_success:
- - git remote rm origin
- - echo removed old origin
- - git remote add origin https://colt05-ci:${GH_TOKEN}@github.com/colt05/dcrlisten.git
- - echo added neworigin
- - git add bitlisten.min.js
- - echo added js file
- - git commit -m "travis build"
- - echo added commit
- - git push -u origin gh-pages
- - echo pushed
+ - git config user.name "Travis CI" >> /dev/null && echo set name
+ - git config user.email "$COMMIT_AUTHOR_EMAIL" >> /dev/null && echo set email
+ - git remote rm origin && echo removed old origin
+ - git remote add origin https://colt05-ci:${GH_TOKEN}@github.com/colt05/dcrlisten.git && echo added neworigin
+ - git add bitlisten.min.js && echo added js file
+ - git commit -m "travis build" && echo added commit
+ - git push -u origin gh-pages && echo pushed
 branches:
   only:
   - gh-pages
