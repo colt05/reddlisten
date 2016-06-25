@@ -13,7 +13,7 @@
   
 ## About ##
 
-Current version hosted at [**Github Pages**](http:/colt05.github.io/dcrlisten).
+Current version hosted at [**Github Pages**](http:/colt05.github.io/reddlisten).
 
 Realtime Decred transaction visualizer written in HTML/Javascript. See and hear new transactions and blocks as they propagate through the Decred Network.
 
