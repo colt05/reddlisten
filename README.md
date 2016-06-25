@@ -1,8 +1,8 @@
-## BitListen - Bitcoin Transaction Visualizer ##
+## DcrListen - Decred Transaction Visualizer ##
 
-Current version hosted at [**BitListen.com**](http://bitlisten.com/). Project formerly known as "Listen to Bitcoin" (ListenToBitcoin.com has been sold.)
+Current version hosted at [**Github Pages**](http:/colt05.github.io/dcrlisten).
 
-Realtime Bitcoin transaction visualizer written in HTML/Javascript. See and hear new transactions and blocks as they propagate through the Bitcoin Network.
+Realtime Decred transaction visualizer written in HTML/Javascript. See and hear new transactions and blocks as they propagate through the Decred Network.
 
 ### Building ###
 
