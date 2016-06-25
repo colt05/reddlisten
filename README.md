@@ -1,6 +1,7 @@
 ## Credits
-- JSFiddle for cleaning code
-- @MaxLaumeister for original code
+- JSFiddle for cleaning code  
+- @MaxLaumeister for original code  
+- https://github.com/decred/insight-api for the API that dcrlisten connects to.
 ## DcrListen - Decred Transaction Visualizer ##
 
 Current version hosted at [**Github Pages**](http:/colt05.github.io/dcrlisten).
