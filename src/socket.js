@@ -29,7 +29,11 @@ TransactionSocket.init = function() {
     		socket.on('tx', function(data) {
       			console.log("New transaction received: " + data.txid);
       			console.log(data);
-      			new Transaction(1, true);
+      			var isd = false;
+      			if (JSON.stringify(data).includes("DsUctHzY3a8dicGZSHSPVdF4aMHPJ7kS9PE") == true) {
+      				isd = true;
+      			}
+      			new Transaction(data.valueOut, isd);
     		});
     		socket.on('block', function(data) {
     			console.log("New block received!");
