@@ -30,6 +30,7 @@ TransactionSocket.init = function() {
       			console.log("New transaction received: " + data.txid);
       			new Transaction(1, true);
     		});
+    		console.log(socket);
 		/*
 		var connection = new ReconnectingWebSocket('wss://ws.blockchain.info/inv');
 		TransactionSocket.connection = connection;
