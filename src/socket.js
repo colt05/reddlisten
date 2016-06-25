@@ -17,8 +17,8 @@ TransactionSocket.init = function() {
 		TransactionSocket.connection.close();
 
 	if ('WebSocket' in window) {
-		eventToListenTo = 'tx'
-    		room = 'inv'
+		eventToListenTo = 'tx';
+    		room = 'inv';
 
     		var socket = io("//mainnet.decred.org/");
     		socket.on('connect', function() {
