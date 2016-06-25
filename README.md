@@ -1,4 +1,4 @@
-# DCRListen [![Build Status](https://travis-ci.org/colt05/dcrlisten.svg?branch=gh-pages)](https://travis-ci.org/colt05/dcrlisten)
+# REDDListen [![Build Status](https://travis-ci.org/colt05/reddlisten.svg?branch=gh-pages)](https://travis-ci.org/colt05/reddlisten)
 ## Credits
 - JSFiddle for cleaning code  
 - @MaxLaumeister for original code  
