@@ -1,3 +1,4 @@
+# DCRListen [![Build Status](https://travis-ci.org/colt05/dcrlisten.svg?branch=gh-pages)](https://travis-ci.org/colt05/dcrlisten)
 ## Credits
 - JSFiddle for cleaning code  
 - @MaxLaumeister for original code  
@@ -6,7 +7,7 @@
 - https://gist.github.com/domenic/ec8b0fc8ab45f39403dd
 - http://stackoverflow.com/questions/19845679/build-with-travis-ci-and-push-some-files-folder-to-another-repository   
   
-## DcrListen - Decred Transaction Visualizer ##
+## About ##
 
 Current version hosted at [**Github Pages**](http:/colt05.github.io/dcrlisten).
 
