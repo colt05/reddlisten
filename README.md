@@ -2,6 +2,9 @@
 - JSFiddle for cleaning code  
 - @MaxLaumeister for original code  
 - https://github.com/decred/insight-api for the API that dcrlisten connects to.  
+- http://stackoverflow.com/questions/18935539/authenticate-with-github-using-token?rq=1
+- https://gist.github.com/domenic/ec8b0fc8ab45f39403dd
+- http://stackoverflow.com/questions/19845679/build-with-travis-ci-and-push-some-files-folder-to-another-repository   
   
 ## DcrListen - Decred Transaction Visualizer ##
 
