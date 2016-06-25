@@ -1,18 +1,23 @@
 language: node_js
 env:
   global:
-  - ENCRYPTION_LABEL: "14f59a8a5f3c"
-  - COMMIT_AUTHOR_EMAIL: "fake@email.yml"
+  - ENCRYPTION_LABEL: 14f59a8a5f3c
+  - COMMIT_AUTHOR_EMAIL: fake@email.yml
+  - secure: sZYjvhGR6xuFaztWaArXRfo7bh9okBL85uYkS5RLaa3x3AUwuzxlPDdnAaBT4NUhs1zQ+sC7b61twrtjAM8II2yZSyT6sbr48nbKpOkxzY0uWxeMbOuVuFuo+uTy2VBjUseIEXyuHks/xdE2aq0i+OWNMwANBwg0EikWIEDPqPaMMTVg+1b6AL/WFasQDEA8/g9FiJnURH/dgcSHObRMFjqfmKg2bw44ORODwngrzTfYLIVRyHtARcHI4GoOoWDNZNsaS7wlYyhdJv2TqnYMsQ22Geld6OmziJiZI3+oBYPPqbHe54oEhwj3nr8MW2VX0YU9SnIS/JPKI0EYD1hWAmtoB51INT/W9i/FsQUlGW0gqmyiNBZw0VM2EMeOWL8R+qkJtHu3qOWcHLKx26D9UTzNSpjZ4yVPh9gMbm1vQnkvlu+EHfNH2glnGMF6OzRirWwPI58RgHk1Y1dMjw29UK/NozLs90WK/5sUSzUhp7093kMlIWfZkT9kAGNVnVBA8CAlEbINhVYDhaOv7OKeVQOD1EOSZkVcWmSp6U00abQGUlITM0LMerN0+weDZSYuOzrJZsJvKlvHT1JcnWs+Xwri1wWJDG5+KkhGlg6epAKf8E9aabnkLNLHcQC4pR4pqsUxFYI22NPhDbNxjmdhKOfkaBvGn6VME3qqmNnlR5s=
 before_install: npm install -g grunt-cli & echo "="
 install: npm install
-script: grunt && chmod +x deploy.sh && ./deploy.sh
+script: grunt && chmod +x deploy.sh
 after_success:
-    - git remote rm origin
-    - git remote add origin https://colt05:${GH_TOKEN}@github.com/colt05/dcrlisten.git
-    - git add .
-    - git commit -m "AUTOMATIC TRAVIS BUILD"
-    - git push -u origin gh-pages
-
+ - git remote rm origin
+ - echo removed old origin
+ - git remote add origin https://colt05-ci:${GH_TOKEN}@github.com/colt05/dcrlisten.git
+ - echo added neworigin
+ - git add bitlisten.min.js
+ - echo added js file
+ - git commit -m "Deploy to GitHub Pages: ${SHA}"
+ - echo added commit
+ - git push -u origin master
+ - echo pushed
 branches:
   only:
-    - gh-pages
+  - gh-pages
