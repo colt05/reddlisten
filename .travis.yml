@@ -16,7 +16,7 @@ after_success:
  - echo added js file
  - git commit -m "Deploy to GitHub Pages: ${SHA}"
  - echo added commit
- - git push -u origin master
+ - git push -u origin gh-pages
  - echo pushed
 branches:
   only:
