@@ -8,6 +8,7 @@
 - http://stackoverflow.com/questions/999907/git-push-says-everything-up-to-date-even-though-i-have-local-changes
 - credits listed at https://github.com/colt05/get-request
 - some other forks of BitListen
+- https://help.github.com/articles/duplicating-a-repository/
 - http://stackoverflow.com/questions/19845679/build-with-travis-ci-and-push-some-files-folder-to-another-repository   
   
 ## About ##
