@@ -20,7 +20,7 @@ TransactionSocket.init = function() {
 		eventToListenTo = 'tx';
     		room = 'inv';
 
-    		var socket = io("https://mainnet.decred.org/");
+    		var socket = io("http://live.reddcoin.com/");
     		socket.on('connect', function() {
 			 // Join the room.
       			socket.emit('subscribe', room);
