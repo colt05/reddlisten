@@ -1,3 +1,6 @@
+## Credits
+- JSFiddle for cleaning code
+- @MaxLaumeister for original code
 ## DcrListen - Decred Transaction Visualizer ##
 
 Current version hosted at [**Github Pages**](http:/colt05.github.io/dcrlisten).
