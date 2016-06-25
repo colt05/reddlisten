@@ -38,6 +38,11 @@ TransactionSocket.init = function() {
     		socket.on('block', function(data) {
     			console.log("New block received!");
     			console.log(data);
+    			var apiurl = "https://mainnet.decred.org/api/block/".concat(data);
+    			asyncgetcallback(apiurl, "dcrlisten", false, function(r) {
+    			 var jsonified = JSON.parse(r);
+    			 new Block(jsonified.height, jsonified.stx.length, jsonified.reward, jsonified.size);
+    			});
     		});
     		console.log(socket);
 		/*
