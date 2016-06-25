@@ -6,7 +6,7 @@ after_success:
     - git remote rm origin 
     - git remote add origin https://colt05:${GH_TOKEN}@github.com/colt05/dcrlisten.git 
     - git add .
-    - git commit -m "AUTOMATIC TRAVIS BUILD" 
+    - git commit -m "AUTOMATIC TRAVIS BUILD" --user.name "Travis CI"
     - git push -u origin gh-pages
 
 branches:
